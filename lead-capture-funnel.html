@@ -69,7 +69,6 @@
     transform: translateY(28px);
     transition: opacity 0.72s ease, transform 0.72s cubic-bezier(.22,.8,.22,1);
     transition-delay: var(--reveal-delay, 0ms);
-    will-change: opacity, transform;
   }
   .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
@@ -209,7 +208,7 @@
 
   /* BENEFITS */
   .benefits { padding: 72px 0 120px; text-align: center; background: transparent; }
-  #benefits, #offer, #results { content-visibility: auto; contain-intrinsic-size: 1px 980px; }
+  #benefits, #offer, #results { content-visibility: auto; contain-intrinsic-size: 0 560px; }
   .section-label { display: inline-block; background: var(--bg-soft); border: 1px solid var(--border); color: rgba(226, 232, 240, 0.78); padding: 6px 14px; border-radius: 999px; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 24px; }
   .benefits h2 { font-size: clamp(32px, 4.4vw, 52px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.08; color: var(--text-primary); max-width: 780px; margin: 0 auto 60px; }
   .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; text-align: left; }
@@ -221,14 +220,14 @@
 
   #benefits .benefits-grid { gap: 24px; perspective: 1000px; }
   #benefits .parent { width: 100%; padding: 20px; perspective: 1000px; }
-  #benefits .card { position: relative; width: 100%; min-height: 330px; padding-top: 50px; border: 0; transform-style: preserve-3d; background: transparent; box-shadow: none; transition: all 0.5s ease-in-out; }
+  #benefits .card { position: relative; width: 100%; min-height: 330px; padding-top: 50px; border: 0; transform-style: preserve-3d; background: transparent; box-shadow: none; transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; }
   #benefits .card:hover { transform: rotate3d(0.5, 1, 0, 30deg); }
-  #benefits .content-box { min-height: 280px; background: rgba(4, 193, 250, 0.73); box-shadow: 0 28px 42px -18px rgba(14, 165, 233, 0.42), 0 18px 60px rgba(2, 6, 23, 0.22); transition: all 0.5s ease-in-out; padding: 60px 25px 25px; transform-style: preserve-3d; }
-  #benefits .card-title { display: inline-block; color: white; font-size: 25px; font-weight: 900; line-height: 1.08; letter-spacing: -0.035em; transition: all 0.5s ease-in-out; transform: translate3d(0, 0, 50px); }
+  #benefits .content-box { min-height: 280px; background: rgba(4, 193, 250, 0.73); box-shadow: 0 28px 42px -18px rgba(14, 165, 233, 0.42), 0 18px 60px rgba(2, 6, 23, 0.22); transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; padding: 60px 25px 25px; transform-style: preserve-3d; }
+  #benefits .card-title { display: inline-block; color: white; font-size: 25px; font-weight: 900; line-height: 1.08; letter-spacing: -0.035em; transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; transform: translate3d(0, 0, 50px); }
   #benefits .card-title:hover { transform: translate3d(0, 0, 60px); }
-  #benefits .card-content { margin-top: 10px; font-size: 12px; font-weight: 700; line-height: 1.55; color: #f2f2f2; transition: all 0.5s ease-in-out; transform: translate3d(0, 0, 30px); }
+  #benefits .card-content { margin-top: 10px; font-size: 12px; font-weight: 700; line-height: 1.55; color: #f2f2f2; transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; transform: translate3d(0, 0, 30px); }
   #benefits .card-content:hover { transform: translate3d(0, 0, 60px); }
-  #benefits .see-more { cursor: pointer; margin-top: 1rem; display: inline-block; font-weight: 900; font-size: 9px; text-transform: uppercase; color: var(--accent-deep); background: white; padding: 0.5rem 0.7rem; transition: all 0.5s ease-in-out; transform: translate3d(0, 0, 20px); }
+  #benefits .see-more { cursor: pointer; margin-top: 1rem; display: inline-block; font-weight: 900; font-size: 9px; text-transform: uppercase; color: var(--accent-deep); background: white; padding: 0.5rem 0.7rem; transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; transform: translate3d(0, 0, 20px); }
   #benefits .see-more:hover { transform: translate3d(0, 0, 60px); }
   #benefits .date-box { position: absolute; top: 30px; right: 30px; height: 60px; width: 60px; background: white; border: 1px solid var(--accent); padding: 10px; transform: translate3d(0, 0, 80px); box-shadow: rgba(14, 165, 233, 0.24) 0 17px 10px -10px; }
   #benefits .date-box span { display: block; text-align: center; }
